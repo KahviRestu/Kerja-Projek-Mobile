@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.MapsFragment"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapsAbsen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            mapbox:mapbox_cameraTargetLat="-6.6458794"
+            mapbox:mapbox_cameraTargetLng="106.8416497"
+            mapbox:mapbox_cameraZoom="15">
+        </com.mapbox.mapboxsdk.maps.MapView>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabInfo"
+            android:src="@drawable/ic_info_outline_black_24dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
